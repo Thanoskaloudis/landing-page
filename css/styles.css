@@ -47,7 +47,7 @@ p {
 
 /* ---- Layout Rules ---- */
 main {
-    margin: 10vh 21em 10vh;
+    margin: 10vh 1em 10vh;
 }
 
 .main-hero {
@@ -60,72 +60,126 @@ section {
     min-height: 80vh;
 }
 
-
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-  
-  header {
+
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 96%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: 0.7s;
-    padding: 40px 60px;
-  }
-  
-  header.sticky {
-    padding: 10px 60px;
-    background: rgb(182,182,182);
-    background: linear-gradient(90deg, rgba(182,182,182,1) 0%, rgba(193,212,215,0.9248074229691877) 100%);   
     z-index: 1;
-  }
-  
-  header .logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgb(182,182,182);
+    background: linear-gradient(90deg, rgba(182,182,182,1) 0%, rgba(193,212,215,0.9248074229691877) 100%); 
+}
+
+.logo {
     position: relative;
     font-weight: 700;
-    color: #b6b6b6;
+    margin: 5px 0px 0px 30px;
+    color: #213b57;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.5em;
     letter-spacing: 1px;
     transition: 0.7s;
-  }
-  
-  header nav ul {
-    position: relative;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header nav ul li {
-    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
     list-style: none;
-  }
-  
-  header nav ul li a {
-    position: relative;
-    margin: 0 15px;
+}
+
+.navbar-links li a {
+    display: block;
     text-decoration: none;
-    color: white;
+    color: #213b57;
+    padding: 1.4rem;
     letter-spacing: 1px;
     font-size: 18px;
-    font-weight: 700px;
+    font-weight: bold;
     transition: 0.7s;
-  }
-  
-  header nav ul li a:hover {
-    color: #999;
-  }
-  
-  header.sticky .logo,
-  header.sticky ul li a {
-    color: black;
-  }
-  
+}
+
+.navbar-links li a:hover {
+    color: rgb(160, 160, 160);
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #213b57;;
+    border-radius: 10px;
+}
+
+.active{
+    border-bottom: 2px solid #ecf0f1;
+}
+
+@media (max-width: 713px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        padding: 1rem;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
 /* Header Styles */
 .page_header {
     background: #fff;
@@ -134,7 +188,7 @@ section {
     width: 100%;
     z-index: 5;
 }
-
+      
 /* Footer Styles */
 .page-footer {
     background: #000;
@@ -145,7 +199,6 @@ section {
 .page-footer p{
     color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */

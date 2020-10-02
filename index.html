@@ -12,18 +12,22 @@
 <body>
   <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header id="header" class="page-header">
+  <nav class="navbar">
     <a href="#" class="logo">landing.</a>
-    <nav class="navbar-menu">
-      <ul>
-        <li><a class="scroll" href="#header">Home</a></li>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul class="main-nav" id="main-nav">
         <li><a class="scroll" href="#news">News</a></li>
         <li><a class="scroll" href="#code">Code</a></li>
         <li><a class="scroll" href="#team">Team</a></li>
-        <li><a class="scroll" href="#section4">About</a></li>
+        <li><a class="scroll" href="#footer">About</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+</nav>
   <main>
     <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
@@ -54,7 +58,7 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer id="footer" class="page-footer">
     <p>&copy Udacity</p>
   </footer>
 

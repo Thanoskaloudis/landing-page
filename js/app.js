@@ -1,9 +1,9 @@
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-document.addEventListener("scroll", function () {
-    let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-  });
-  
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
 
 document.addEventListener("click", function (e) {
   // If it isn't an anchor element, don't do anything
@@ -31,3 +31,18 @@ function scrollAnchors(e, respond) {
     window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
   }
 }
+
+const links = document.querySelectorAll('.scroll');
+const sections = document.querySelectorAll('section');
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+  
+  links.forEach((link) => link.classList.remove('active'));
+  links[index].classList.add('active');
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);

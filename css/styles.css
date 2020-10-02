@@ -104,13 +104,13 @@ section {
 
 .navbar-links li {
     list-style: none;
+    padding: 1.4rem;
 }
 
 .navbar-links li a {
     display: block;
     text-decoration: none;
     color: #213b57;
-    padding: 1.4rem;
     letter-spacing: 1px;
     font-size: 18px;
     font-weight: bold;
@@ -162,6 +162,10 @@ section {
         width: 100%;
     }
 
+    .navbar-links li {
+        padding: 1.1rem;
+    }
+
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
@@ -172,6 +176,7 @@ section {
     }
 
     .navbar-links ul li a {
+        display: inline;
         padding: .5rem 1rem;
     }
 

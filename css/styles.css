@@ -193,6 +193,23 @@ section {
     width: 100%;
     z-index: 5;
 }
+
+.scrollToTopBtn {
+    width: 37px;
+    height: 37px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+    background-color: darkcyan;
+    border-radius: 50%;
+    border: none;
+    color: azure;
+    font-size: 27px;
+    font-weight: 900;
+}
       
 /* Footer Styles */
 .page-footer {

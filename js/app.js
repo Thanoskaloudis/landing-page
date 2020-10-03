@@ -1,3 +1,5 @@
+/* Scroll to the selected section from navbar */
+
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -32,6 +34,8 @@ function scrollAnchors(e, respond) {
   }
 }
 
+/* Handle active state on scrolling */
+
 const links = document.querySelectorAll('.scroll');
 const sections = document.querySelectorAll('section');
 
@@ -46,3 +50,31 @@ function changeLinkState() {
 
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
+
+/* Scroll to Top logic */
+
+const scrollToTopBtn= document.querySelector(".scrollToTopBtn");
+const rootElement = document.documentElement;
+
+function handleScroll() {
+  // do something on scroll
+  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+  if ((rootElement.scrollTop / scrollTotal ) > 0.80) {
+    //show button
+    scrollToTopBtn.style.display = "block";
+  } else {
+    //hide button
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  //scroll to top logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+document.addEventListener("scroll", handleScroll);

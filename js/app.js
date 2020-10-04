@@ -46,6 +46,9 @@ function changeLinkState() {
   
   links.forEach((link) => link.classList.remove('active'));
   links[index].classList.add('active');
+
+  sections.forEach((section) => section.classList.remove('active-section'));
+  sections[index].classList.add('active-section');
 }
 
 changeLinkState();

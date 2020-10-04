@@ -1,4 +1,4 @@
-/* Scroll to the selected section from navbar */
+/* Scroll to the selected section from the navbar */
 
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
@@ -69,7 +69,6 @@ function handleScroll() {
 };
 
 function scrollToTop() {
-  //scroll to top logic
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"

@@ -1,3 +1,12 @@
+/* Creating navbar besed on the number of sections */
+
+const sections = document.querySelectorAll('section');
+
+for(let i=0; i < sections.length; i++){
+  document.getElementById("main-nav").innerHTML += `
+   <li><a class="scroll" href='#`+ sections[i].id + `'>` + sections[i].dataset.nav + `</a></li>`;
+}
+
 /* Scroll to the selected section from the navbar */
 
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
@@ -37,7 +46,6 @@ function scrollAnchors(e, respond) {
 /* Handle active state on scrolling */
 
 const links = document.querySelectorAll('.scroll');
-const sections = document.querySelectorAll('section');
 
 function changeLinkState() {
   let index = sections.length;
